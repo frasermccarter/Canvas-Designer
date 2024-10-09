@@ -1,0 +1,30 @@
+#canvas-container {
+    position: relative;
+    display: inline-block;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+.text-box {
+    border: 1px dashed black;
+    position: absolute;
+    display: none;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.cursor {
+    position: absolute;
+    width: 2px;
+    height: 30px; /* Match the height of the text */
+    background-color: black;
+    display: none; /* Initially hidden */
+    animation: blink 1s step-start infinite; /* Blinking effect */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
