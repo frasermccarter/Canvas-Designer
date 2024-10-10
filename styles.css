@@ -11,20 +11,54 @@ canvas {
     border: 1px dashed black;
     position: absolute;
     display: none;
-    pointer-events: none; /* Allow clicks to pass through */
+    pointer-events: none;
+    /* Allow clicks to pass through */
 }
 
 .cursor {
     position: absolute;
     width: 2px;
-    height: 30px; /* Match the height of the text */
+    height: 30px;
+    /* Match the height of the text */
     background-color: black;
-    display: none; /* Initially hidden */
-    animation: blink 1s step-start infinite; /* Blinking effect */
+    display: none;
+    /* Initially hidden */
+    animation: blink 1s step-start infinite;
+    /* Blinking effect */
 }
 
 @keyframes blink {
     50% {
         opacity: 0;
     }
+}
+
+#hotbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.circular-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 5%;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.circular-btn.active {
+    background-color: #ccc; /* Change background color when active */
+    color: white;           /* Change text color when active */
+}
+
+select {
+    margin-right: 10px;
+    padding: 5px;
 }
